@@ -1,0 +1,227 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  line-height: 1.5;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 40px;
+  max-width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #e41c23;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, #fff, #f7f7f7);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #e41c23;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* ===== BRANDS GRID ===== */
+.brands {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: #fafafa;
+}
+
+.brand-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1.8rem 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.brand-card img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.brand-card h3 {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ========================================================= */
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+/* ========================================================= */
+
+/* Large tablets / small laptops */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .brands {
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .brand-card img {
+    width: 100px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 1rem 0;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .brands {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .logo img {
+    height: 32px;
+  }
+
+  .hero {
+    padding: 3rem 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .brands {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .brand-card {
+    padding: 1.2rem;
+  }
+
+  .brand-card img {
+    width: 90px;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 1.2rem;
+  }
+}
+
+/* Smallest screens */
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .brand-card img {
+    width: 80px;
+  }
+}
